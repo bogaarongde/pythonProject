@@ -1,1 +1,8 @@
-print('hello2')
+import greet
+import math
+
+greet.udvozles('Tomi')
+
+print(math.pi)
+
+
