@@ -1,7 +1,7 @@
-import greet
+from greet import udvozles
 import math
 
-greet.udvozles('Tomi')
+udvozles('Tomi')
 
 print(math.pi)
 

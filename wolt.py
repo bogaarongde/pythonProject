@@ -1,6 +1,13 @@
+
+class Food:
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
 class Restaurant:
 
-    def __init__(self, menu_items,name):
+    def __init__(self, menu_items: list[Food],name: str): # type hinting
         self.menu_items = menu_items
         self.name = name
     def __str__(self):
@@ -14,14 +21,10 @@ class Restaurant:
 
     def getmenuitems(self):
         for menu_item in self.menu_items:
-            print(f"{menu_item.name}..............{menu_item.price} Ft")
+            print(f"{menu_item.name}{'.' * (20 - len(menu_item.name) - len(str(menu_item.price)))}{menu_item.price} Ft")
 
 
-class Food:
 
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
 
 
 my_menu = [Food('Hambi', 100), Food('Krumpli', 100)]

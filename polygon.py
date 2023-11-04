@@ -7,6 +7,10 @@ class Polygon:
 
 my_polygon = Polygon(4)
 
+my_polygon.color = "valami"
+
+print(my_polygon.color)
+
 print(f"Ennek a polygonnak {my_polygon.sides} oldala van és a színe {my_polygon.color} ")
 
 my_triangle = Polygon(3)
