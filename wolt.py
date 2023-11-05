@@ -5,11 +5,13 @@ class Food:
         self.name = name
         self.price = price
 
+
 class Restaurant:
 
-    def __init__(self, menu_items: list[Food],name: str): # type hinting
+    def __init__(self, menu_items: list[Food], name: str):  # type hinting
         self.menu_items = menu_items
         self.name = name
+
     def __str__(self):
         return f"Ez egy resturant osztály, az étterem neve {self.name}"
 
@@ -24,16 +26,13 @@ class Restaurant:
             print(f"{menu_item.name}{'.' * (20 - len(menu_item.name) - len(str(menu_item.price)))}{menu_item.price} Ft")
 
 
-
-
-
 my_menu = [Food('Hambi', 100), Food('Krumpli', 100)]
 
-my_restaurant = Restaurant(my_menu,"Kifli étterem")
+my_restaurant = Restaurant(my_menu, "Kifli étterem")
 
 print(my_restaurant)
 
-my_restaurant + Food('Béka',210)
+my_restaurant + Food('Béka', 210)
 
 my_restaurant.getmenuitems()
 
@@ -41,7 +40,7 @@ my_restaurant.getmenuitems()
 for i in range(2):
     input_name = input("Add meg, hogy melyik elemet szeretnéd: ")
     input_price = input("Add meg, hogy mennyiért: ")
-    my_restaurant.menu_items.append(Food(input_name, input_price))
+    my_restaurant + Food(input_name, input_price)
 
 
 my_restaurant.getmenuitems()

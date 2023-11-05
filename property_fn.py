@@ -7,18 +7,19 @@ class Auto:
         return self._sebesseg
 
     def set_sebesseg(self, ertek):
+        print("Ez a setter")
         if ertek >= 0:
             self._sebesseg = ertek
         else:
             print("A sebesség nem lehet negatív!")
 
-    sebessegek = property(get_sebesseg, set_sebesseg)
+    sebesseg = property(get_sebesseg, set_sebesseg)
 
 
 my_auto = Auto()
 
-print(my_auto.sebessegek)
+print(my_auto.sebesseg)
 
-my_auto.sebessegek = -3
+my_auto.sebesseg = -3
 
-print(my_auto.sebessegek)
+print(my_auto.sebesseg)
