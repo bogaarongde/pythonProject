@@ -2,22 +2,20 @@ class Polygon:
     color = 'piros'
     def __init__(self, sides):
         self.sides = sides
-        self.oldalszelesseg = 2
+        self.__oldalszelesseg = 2
+
+    def getoldalszelleseg(self):
+        return self.__oldalszelesseg
+
+    def __str__(self):
+        return "Én egy polygon vagyok"
 
 
 my_polygon = Polygon(4)
 
-my_polygon.color = "valami"
+print(my_polygon._Polygon__oldalszelesseg)
 
-print(my_polygon.color)
+print(my_polygon.getoldalszelleseg())
+# print(my_polygon)
 
-print(f"Ennek a polygonnak {my_polygon.sides} oldala van és a színe {my_polygon.color} ")
 
-my_triangle = Polygon(3)
-
-print(f"Ennek a polygonnak {my_triangle.sides} oldala van és a színe {my_triangle.color} ")
-
-Polygon.color = 'kek'
-print(f"Ennek a polygonnak {my_triangle.sides} oldala van és a színe {my_triangle.color} ")
-
-print(f"My_polygon polygonnak {my_polygon.sides} oldala van és a színe {my_polygon.color} ")
