@@ -57,6 +57,8 @@ def main():
         shape = shape_factory.create_shape(shape_type, x, y)
         shapes.append(shape)
 
+    shape1 = shape_factory.create_shape('Circle',10,20)
+    shapes.append(shape1)
     # Draw all the shapes
     for shape in shapes:
         shape.draw()

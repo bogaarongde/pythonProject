@@ -20,7 +20,10 @@ class ClassicSingleton:
         return self._instance
     
 #s0 = ClassicSingleton()
+
+
 s1 = ClassicSingleton.get_instance()
+
 s2 = ClassicSingleton.get_instance()
 
 print(s1 is s2)
